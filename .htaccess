@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^website.com [NC]
+RewriteRule ^(.*)$ http://www.website.com/$1 [L,R=301,NC]
+
+RewriteRule content(.*)$ create.php?id=$1
+RewriteRule dash-board dashboard.php
+
